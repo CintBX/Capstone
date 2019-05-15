@@ -4,18 +4,18 @@
 
 <h1>Portfolios</h1>
 
-<table>
-	<% @portfolios.each do |portfolio| %>
-		<tr>
-			<td><%= link_to portfolio.title, portfolio_path(portfolio) %></td>
-			<td><%= link_to "Edit", edit_portfolio_path(portfolio) %></td>
-			<td><%= link_to "Delete", portfolio_path(portfolio), method: :delete, data: { confirm: "Are you sure?" } %></td>
-		</tr>
-	<% end %>
-</table>
+<%= link_to "Create Portfolio", new_portfolio_path %>
+
+<% @portfolios.each do |portfolio| %>
+	<p><%= link_to portfolio.title, portfolio_path(portfolio) %></p>
+	<p><%= portfolio.subtitle %></p>
+	<p><%= image_tag portfolio.thumb_image %></p>
+	<p><%= link_to "Edit", edit_portfolio_path(portfolio) %></p>
+	<p><%= link_to "Delete", portfolio_path(portfolio), method: :delete, data: { confirm: "Are you sure?" } %></p>
+	<hr>
+<% end %>
 
 <br>
-<%= link_to "Create Portfolio", new_portfolio_path %>
 
 <%= link_to "Log out", destroy_user_session_path, method: :delete, id: 'Log out' if current_user %>
 
