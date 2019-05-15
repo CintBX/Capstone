@@ -2,8 +2,10 @@
 
 <%= render 'shared/header' %>
 
-<h1><%= @portfolio.title %></h1>
-<h3><%= @portfolio.body %></h3>
+<h1><%= @portfolio.title.upcase %></h1>
+<h2><%= @portfolio.subtitle %></h2>
+<p><%= image_tag @portfolio.main_image %></p>
+<p><%= @portfolio.body %></p>
 
 <%= link_to "Edit", edit_portfolio_path(@portfolio) %>
 <%= link_to "Delete", portfolio_path(@portfolio), method: :delete, data: { confirm: "Are you sure?" } %>
@@ -11,4 +13,5 @@
 <br>
 <%= link_to 'Portfolios', portfolios_path %>
 
+<br>
 <%= render 'shared/footer' %>
