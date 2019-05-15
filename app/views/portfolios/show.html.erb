@@ -1,0 +1,14 @@
+<%= render 'shared/navbar' %>
+
+<%= render 'shared/header' %>
+
+<h1><%= @portfolio.title %></h1>
+<h3><%= @portfolio.body %></h3>
+
+<%= link_to "Edit", edit_portfolio_path(@portfolio) %>
+<%= link_to "Delete", portfolio_path(@portfolio), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<br>
+<%= link_to 'Portfolios', portfolios_path %>
+
+<%= render 'shared/footer' %>
