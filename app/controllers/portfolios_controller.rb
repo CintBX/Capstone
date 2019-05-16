@@ -2,6 +2,7 @@ class PortfoliosController < ApplicationController
 	before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
 	def index
 		@portfolios = Portfolio.all
+		@page_title = "Dustin's Portfolio"
 	end
 
 	def new
@@ -21,6 +22,8 @@ class PortfoliosController < ApplicationController
 	end
 
 	def show
+		@page_title = @portfolio.title
+		@seo_keywords = @portfolio.body
 	end
 
 	def edit
