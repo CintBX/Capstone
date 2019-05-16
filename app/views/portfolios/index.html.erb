@@ -1,7 +1,5 @@
 <%= render 'shared/navbar' %>
 
-<%= render 'shared/header' %>
-
 <h1>Portfolios</h1>
 
 <%= link_to "Create Portfolio", new_portfolio_path %>
@@ -18,5 +16,3 @@
 <br>
 
 <%= link_to "Log out", destroy_user_session_path, method: :delete, id: 'Log out' if current_user %>
-
-<%= render 'shared/footer' %>
