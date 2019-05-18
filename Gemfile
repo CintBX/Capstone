@@ -29,3 +29,13 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.6', '>= 4.6.2'
+
+# Gems from Discussion Forum Guide
+gem 'bulma-rails', '~> 0.6.2'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rolify', '~> 5.2'
+gem 'cancancan', '~> 2.1', '>= 2.1.3'
+gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.2'
