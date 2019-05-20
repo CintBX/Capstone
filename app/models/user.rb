@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+ # Possibly validate :username
  validates_presence_of :name
 
  def first_name
