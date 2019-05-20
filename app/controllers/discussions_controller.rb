@@ -2,6 +2,8 @@ class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
   before_action :find_channels, only: [:index, :show, :new, :edit]
 
+  layout 'discussion'
+
   def index
     @discussions = Discussion.all.order("created_at DESC")
   end
