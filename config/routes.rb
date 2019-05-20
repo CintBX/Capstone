@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+  resources :channels
+  
   resources :discussions do
   	resources :replies
   end
-
-	root to: 'pages#home'
-
-  get 'about', to: 'pages#about'
+  
+  resources :portfolios
 
   devise_for :users, controllers: { registrations: 'registrations' }
 
-  resources :portfolios
+	get 'about', to: 'pages#about'
+	
+	root to: 'pages#home'
 end
