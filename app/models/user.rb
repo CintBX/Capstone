@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :discussions, dependent: :destroy
+  has_many :channels, through: :discussions
+
  # Possibly validate :username
  validates_presence_of :name
 
