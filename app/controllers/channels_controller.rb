@@ -1,32 +1,24 @@
 class ChannelsController < ApplicationController
   before_action :set_channel, only: [:show, :edit, :update, :destroy]
 
-  # GET /channels
-  # GET /channels.json
   def index
     @channels = Channel.all
     @discussions = Discussion.all.order("created_at DESC")
   end
 
-  # GET /channels/1
-  # GET /channels/1.json
   def show
     @discussions = Discussion.where(channel_id = @channel.id)
-    # @discussions = Discussion.where("channel_id = ?", @channel.id)    <<<He does it this way, delete this later
+    # @discussions = Discussion.where("channel_id = ?", @channel.id)   <<<He does it this way, delete this later
     @channels = Channel.all
   end
 
-  # GET /channels/new
   def new
     @channel = Channel.new
   end
 
-  # GET /channels/1/edit
   def edit
   end
 
-  # POST /channels
-  # POST /channels.json
   def create
     @channel = Channel.new(channel_params)
 
@@ -41,8 +33,6 @@ class ChannelsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /channels/1
-  # PATCH/PUT /channels/1.json
   def update
     respond_to do |format|
       if @channel.update(channel_params)
@@ -55,8 +45,6 @@ class ChannelsController < ApplicationController
     end
   end
 
-  # DELETE /channels/1
-  # DELETE /channels/1.json
   def destroy
     @channel.destroy
     respond_to do |format|
@@ -66,12 +54,10 @@ class ChannelsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_channel
       @channel = Channel.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
       params.require(:channel).permit(:channel)
     end
