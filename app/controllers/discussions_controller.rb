@@ -58,7 +58,7 @@ class DiscussionsController < ApplicationController
     end
 
     def discussion_params
-      params.require(:discussion).permit(:title, :content)
+      params.require(:discussion).permit(:title, :content, :channel_id)
     end
 
     def find_channels
