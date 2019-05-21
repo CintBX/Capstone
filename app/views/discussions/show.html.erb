@@ -15,10 +15,10 @@
 		</div>
 
 		<div class="content"><%= @discussion.content %></div>
-		<h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> Replies</h2>
+		<h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> replies</h2>
 
 		<div id="discussion-replies">
-			<%# render @discussion.replies %>
+			<%= render @discussion.replies %>
 		</div>
 
 		<hr>
@@ -26,7 +26,7 @@
 		<% if current_user.name == "Guest User" %>
 			<p>To reply you need to <%= link_to "login", new_user_session_path %>.  Don't have an account? <%= link_to "Sign up", new_user_registration_path %> for one.</p>
 		<% else %>
-			<%# render replies/form %>
+			<%= render 'replies/form' %>
 		<% end %>
 	</div>
 
