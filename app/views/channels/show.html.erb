@@ -1,9 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class="columns is-centered">	
+	<div class="column">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Channel:</strong>
-  <%= @channel.channel %>
-</p>
+		<h1 class="title"><%= @channel.channel %> channel</h1>
 
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+		<%= link_to 'Edit', edit_channel_path(@channel), class: 'button is-warning' %>
+		<%= link_to 'Back', channels_path, class: 'button is-info' %>
+	</div>
+</div>
