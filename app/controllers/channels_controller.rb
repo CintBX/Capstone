@@ -1,5 +1,6 @@
 class ChannelsController < ApplicationController
   before_action :set_channel, only: [:show, :edit, :update, :destroy]
+  layout 'discussion'
 
   def index
     @channels = Channel.all
