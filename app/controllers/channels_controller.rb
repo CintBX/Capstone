@@ -8,8 +8,7 @@ class ChannelsController < ApplicationController
   end
 
   def show
-    @discussions = Discussion.where(channel_id = @channel.id)
-    # @discussions = Discussion.where("channel_id = ?", @channel.id)   <<<He does it this way, delete this later
+    @discussions = Discussion.where(channel_id: @channel.id)
     @channels = Channel.all
   end
 
