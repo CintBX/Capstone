@@ -3,7 +3,7 @@ class RepliesController < ApplicationController
 	before_action :set_discussion, only: [:create, :edit, :update, :show, :update, :destroy]
 
 	def create
-		@reply = @discussion.replies.create(params[:reply]).permit(:reply, :discussion_id)
+		@reply = @discussion.replies.create(params[:reply].permit(:reply, :discussion_id))
 		@reply.user_id = current_user.id
 
 		respond_to do |format|
@@ -50,7 +50,7 @@ class RepliesController < ApplicationController
 	end
 
 	def set_reply
-		@reply = Replies.find(params[:id])
+		@reply = Reply.find(params[:id])
 	end
 
 	def reply_params
