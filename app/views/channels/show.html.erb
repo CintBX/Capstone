@@ -3,8 +3,9 @@
 		<p id="notice"><%= notice %></p>
 
 		<h1 class="title"><%= @channel.channel %> channel</h1>
-
-		<%= link_to 'Edit', edit_channel_path(@channel), class: 'button is-warning' %>
-		<%= link_to 'Back', channels_path, class: 'button is-info' %>
+		<% if has_role?(:admin) %>
+			<%= link_to 'Edit', edit_channel_path(@channel), class: 'button is-warning' %>
+			<%= link_to 'Back', channels_path, class: 'button is-info' %>
+		<% end %>
 	</div>
 </div>
