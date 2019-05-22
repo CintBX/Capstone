@@ -15,23 +15,23 @@
 				</p>
 			</div>
 
-			<!-- check role -->
-			<nav class="level is-mobile">
-				<div class="level-left">
-					<a class="level-item">
-						<%= link_to edit_discussion_reply_path(reply.discussion, reply) do %>
-							<span class="icon is-small"><i class="fa fa-pencil"></i></span>
-						<% end %>
-					</a>
+			<% if reply_author(reply) %>
+				<nav class="level is-mobile">
+					<div class="level-left">
+						<a class="level-item">
+							<%= link_to edit_discussion_reply_path(reply.discussion, reply) do %>
+								<span class="icon is-small"><i class="fa fa-pencil"></i></span>
+							<% end %>
+						</a>
 
-					<a class="level-item">
-						<%= link_to [reply.discussion, reply], method: :delete, data: { confirm: "Are you sure?" } do %>
-							<span class="icon is-small"><i class="fa fa-trash-o"></i></span>
-						<% end %>
-					</a>
-				</div>
-			</nav>
-			<!-- end check -->
+						<a class="level-item">
+							<%= link_to [reply.discussion, reply], method: :delete, data: { confirm: "Are you sure?" } do %>
+								<span class="icon is-small"><i class="fa fa-trash-o"></i></span>
+							<% end %>
+						</a>
+					</div>
+				</nav>
+			<% end %>
 
 		</div>
 	</article>
