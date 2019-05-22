@@ -1,11 +1,17 @@
-<div class="columns is-centered">	
-	<div class="column">
-		<p id="notice"><%= notice %></p>
+<div class="level">
+	<div class="level-left">
+		<h1 class="title is-2"><%= @channel.channel %> channel</h1>
+	</div>
 
-		<h1 class="title"><%= @channel.channel %> channel</h1>
+	<div class="level-right">
 		<% if has_role?(:admin) %>
-			<%= link_to 'Edit', edit_channel_path(@channel), class: 'button is-warning' %>
-			<%= link_to 'Back', channels_path, class: 'button is-info' %>
+			<%= link_to 'Edit Channel', edit_channel_path(@channel), class: 'button is-warning' %>
 		<% end %>
 	</div>
+</div>
+<hr>
+
+<div class="columns">
+	<%= render 'shared/discussions' %>
+	<%= render 'discussions/sidebar' %>
 </div>
