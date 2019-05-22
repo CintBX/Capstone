@@ -1,4 +1,5 @@
 module DiscussionsHelper
+	# Markdown
 	require 'redcarpet/render_strip'
 
 	class CodeRayify < Redcarpet::Render::HTML
@@ -20,7 +21,17 @@ module DiscussionsHelper
 	end
 
 	def strip_markdown(text)
-		markdown_to_plain_text = Redcarpet::Markdown.new(Redcarpet::Render::Stripdown)
+		markdown_to_plain_text = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
 		markdown_to_plain_text.render(text).html_safe
+	end
+
+
+	# User role checking
+	def discussion_author(discussion)
+		user_signed_in? && current_user.id == discussion.user_id
+	end
+
+	def reply_author(reply)
+		user_signed_in? && current_user.id == reply.user_id
 	end
 end

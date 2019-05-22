@@ -2,7 +2,7 @@
 	<div class="column is-8">
 		<h1 class="title is-2 has-text-grey discussion-title"><%= @discussion.title %></h1>
 		<h3 class="subtitle is-5 has-text-grey-lighter">by <%= @discussion.user.username %></h3>
-		<!-- role check -->
+		<% if discussion_author(@discussion) %>
 		<div class="level">
 			<div class="level-left"></div>
 			<div class="level-right">
@@ -12,7 +12,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- end role check -->
+		<% end %>
 
 		<div class="content"><%= markdown(@discussion.content) %></div>
 		<h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> replies</h2>
