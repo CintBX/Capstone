@@ -14,7 +14,7 @@
 					<% end %>
 
 					<div class="content">
-						<%= truncate(discussion.content, length: 140) %>
+						<%= truncate(strip_markdown(discussion.content), length: 140) %>
 						<p>
 							<em>
 								<small>
