@@ -2,16 +2,16 @@
 	<div class="column is-8">
 		<h1 class="title is-2 has-text-grey discussion-title"><%= @discussion.title %></h1>
 		<h3 class="subtitle is-5 has-text-grey-lighter">by <%= @discussion.user.username %></h3>
-		<% if discussion_author(@discussion) %>
-		<div class="level">
-			<div class="level-left"></div>
-			<div class="level-right">
-				<div class="buttons">
-					<%= link_to "Edit discussion", edit_discussion_path(@discussion), class: 'button is-warning' %>
-					<%= link_to "Delete", discussion_path(@discussion), method: :delete, data: { confirm: "Delete discussion?" }, class: 'button is-danger' %>
+		<% if discussion_author(@discussion) || has_role?(:admin) %>
+			<div class="level">
+				<div class="level-left"></div>
+				<div class="level-right">
+					<div class="buttons">
+						<%= link_to "Edit discussion", edit_discussion_path(@discussion), class: 'button is-warning' %>
+						<%= link_to "Delete", discussion_path(@discussion), method: :delete, data: { confirm: "Delete discussion?" }, class: 'button is-danger' %>
+					</div>
 				</div>
 			</div>
-		</div>
 		<% end %>
 
 		<div class="content"><%= markdown(@discussion.content) %></div>
