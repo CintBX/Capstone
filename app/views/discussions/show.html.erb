@@ -15,7 +15,7 @@
 		<% end %>
 
 		<div class="content"><%= markdown(@discussion.content) %></div>
-		<h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> replies</h2>
+		<h2 class="subtitle is-5 has-text-grey">Replies</h2>
 
 		<div id="discussion-replies">
 			<%= render @discussion.replies %>
