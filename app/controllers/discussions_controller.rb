@@ -62,6 +62,6 @@ class DiscussionsController < ApplicationController
     end
 
     def find_channels
-      @channels = Channel.all.order("created_at DESC")
+      @channels = Channel.all
     end
 end
