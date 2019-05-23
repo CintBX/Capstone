@@ -27,7 +27,7 @@
     <label class="label">Channel</label>    
     <div class="control has-icons-left">
       <span class="select">
-        <%= form.input_field :channel_id, collection: @channels.map { |c| [c.channel, c.id] }, prompt: "Select channel" %>
+        <%= form.input_field :channel_id, collection: @channels.map { |c| [c.channel, c.id] }, include_blank: false %>
       </span>
 
       <span class="icon is-small is-left">
