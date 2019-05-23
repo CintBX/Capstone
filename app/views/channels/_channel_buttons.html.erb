@@ -1,0 +1,5 @@
+<% if has_role?(:admin) %>
+	<%= link_to 'Edit Channel', edit_channel_path(@channel), class: 'button is-warning channel-button-resize' %>
+<% elsif user_signed_in? %>
+	<%= link_to 'Create a new Discussion', new_discussion_path, class: "button is-info channel-button-resize" %>
+<% end %>

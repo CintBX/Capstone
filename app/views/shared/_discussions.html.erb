@@ -1,4 +1,4 @@
-<div class="column is-8">
+<div class="column is-8 margin-top">
 	<h3 class="title is-5 has-text-grey-light">Latest Discussions</h3>
 	<div class="discussions">
 
@@ -13,7 +13,11 @@
 						<h3 class="title is-5"><%= discussion.title %></h3>
 					<% end %>
 
-					<div class="content">
+					<div class="has-text-grey">
+						<%= discussion.replies.count %> replies
+					</div>
+
+					<div class="content margin-top">
 						<%= truncate(strip_markdown(discussion.content), length: 140) %>
 						<p>
 							<em>
