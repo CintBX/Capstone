@@ -4,9 +4,7 @@
 	</div>
 
 	<div class="level-right">
-		<% if has_role?(:admin) %>
-			<%= link_to 'Edit Channel', edit_channel_path(@channel), class: 'button is-warning' %>
-		<% end %>
+		<%= render 'channel_buttons' %>
 	</div>
 </div>
 <hr>
