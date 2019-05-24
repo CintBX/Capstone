@@ -3,7 +3,7 @@ class PortfoliosController < ApplicationController
 	layout "portfolio"
 	
 	def index
-		@portfolios = Portfolio.all
+		@portfolio_items = Portfolio.all
 		@page_title = "Dustin's Portfolio"
 	end
 
@@ -12,14 +12,14 @@ class PortfoliosController < ApplicationController
 	end
 
 	def new
-		@portfolio = Portfolio.new
+		@portfolio_item = Portfolio.new
 	end
 
 	def create
-		@portfolio = Portfolio.new(portfolio_params)
+		@portfolio_item = Portfolio.new(portfolio_params)
 
 		respond_to do |format|
-			if @portfolio.save
+			if @portfolio_item.save
 				format.html { redirect_to portfolios_path, notice: "Your portfolio has been created." }
 			else
 				format.html { render :new }
@@ -28,8 +28,8 @@ class PortfoliosController < ApplicationController
 	end
 
 	def show
-		@page_title = @portfolio.title
-		@seo_keywords = @portfolio.body
+		@page_title = @portfolio_item.title
+		@seo_keywords = @portfolio_item.body
 	end
 
 	def edit
@@ -37,8 +37,8 @@ class PortfoliosController < ApplicationController
 
 	def update
 		respond_to do |format|
-			if @portfolio.update(portfolio_params)
-				format.html { redirect_to portfolios_path, notice: "Your portfolio has been updated." }
+			if @portfolio_item.update(portfolio_params)
+				format.html { redirect_to portfolios_path, notice: "Your portfolio item has been updated." }
 			else
 				format.html { render :edit }
 			end
@@ -46,7 +46,7 @@ class PortfoliosController < ApplicationController
 	end
 
 	def destroy
-		@portfolio.destroy
+		@portfolio_item.destroy
 
 		respond_to do |format|
 			format.html { redirect_to portfolios_path, notice: "Record was deleted." }
@@ -56,7 +56,7 @@ class PortfoliosController < ApplicationController
 	private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title,
+    params.require(:portfolio_item).permit(:title,
                                       :subtitle,
                                       :body,
                                       :main_image,
@@ -65,6 +65,6 @@ class PortfoliosController < ApplicationController
   end
 
   def set_portfolio_item
-    @portfolio = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.find(params[:id])
   end
 end
