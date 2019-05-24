@@ -1,11 +1,14 @@
 class PortfoliosController < ApplicationController
-	before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
-	
+	before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]	
 	layout "portfolio"
 	
 	def index
 		@portfolios = Portfolio.all
 		@page_title = "Dustin's Portfolio"
+	end
+
+	def angular
+		@angular_portfolio_items = Portfolio.angular
 	end
 
 	def new
