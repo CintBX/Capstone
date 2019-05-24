@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  resources :channels
-  
+  devise_for :users, controllers: { registrations: 'registrations' }
+
+  resources :portfolios, except: [:show]
+  get 'angular-items', to: 'portfolios#angular'
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+
+  resources :channels  
   resources :discussions do
   	resources :replies
   end
-  
-  resources :portfolios
 
-  devise_for :users, controllers: { registrations: 'registrations' }
-
-	get 'about', to: 'pages#about'
-	
+	get 'about-me', to: 'pages#about'
 	root to: 'pages#home'
 end
