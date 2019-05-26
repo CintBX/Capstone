@@ -19,9 +19,9 @@ group :development, :test do
 end
 
 group :development do
-    gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-    gem 'spring'
+  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
@@ -38,3 +38,6 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'simple_form', '~> 4.1'
+
+# Gems for the rest of your app
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
