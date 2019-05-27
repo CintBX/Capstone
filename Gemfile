@@ -41,3 +41,4 @@ gem 'simple_form', '~> 4.1'
 
 # Gems for the rest of your app
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'cintron_view_tool', '~> 0.1.0'
