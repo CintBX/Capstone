@@ -1,5 +1,5 @@
 <div class="column is-3 is-offset-2 margin-top">
-	<h3 class="title is-5 has-text-grey-light">Channels</h3>	
+	<h3 class="title is-5 has-text-grey-light">Discussion Channels</h3>
 
 	<ul class="list">
 		<% @channels.each do |c| %>
@@ -13,4 +13,7 @@
 		<%= link_to 'New Channel', new_channel_path, class: 'button is-info' %><br/>
 		<%= link_to 'View All Channels', channels_path, class: 'button is-success button-seperate' %>
 	<% end %>
+
+	<h3 class="title is-5 has-text-grey-light margin-top-plus">Site Navigation</h3>
+	<%= render 'shared/nav' %>
 </div>
