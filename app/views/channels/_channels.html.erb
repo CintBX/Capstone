@@ -1,0 +1,12 @@
+<% @channels.each do |channel| %>
+  <tr>
+    <td><%= link_to channel.channel, channel %> (<%= channel.discussions.count %> discussions)</td>
+    <td>
+      <div class="buttons is-right">
+        <%= link_to "View", channel, class: 'button is-success' %>
+        <%= link_to "Edit", edit_channel_path(channel), class: 'button is-warning' %>
+        <%= link_to "Delete", channel, class: 'button is-danger', method: :delete, data: { confirm: "Are you sure you want to delete this channel?" } %>
+      </div>
+    </td>
+  </tr>
+<% end %>
