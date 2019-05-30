@@ -4,7 +4,7 @@ class DiscussionsController < ApplicationController
   layout 'discussion'
 
   def index
-    @discussions = Discussion.all.order("created_at DESC")
+    @discussions = Discussion.page(params[:page]).per(4).order("created_at DESC")
   end
 
   def show

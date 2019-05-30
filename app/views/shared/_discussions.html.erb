@@ -1,7 +1,6 @@
-<div class="column is-8 margin-top">
-	<h3 class="title is-5 has-text-grey-light">Latest Discussions</h3>
-	<div class="discussions">
-
+<div class="column is-8">
+	<h3 class="title is-5 has-text-grey-light margin-top">Latest Discussions</h3>
+	<div class="discussions margin-bottom">
 		<% @discussions.each do |discussion| %>
 			<div class="columns bb-not-last pv10">
 				<div class="column is-1">
@@ -42,5 +41,11 @@
 				
 			</div>
 		<% end %>
+	</div>
+	<div>
+		<strong><%= page_entries_info @discussions, entry_name: 'item' %></strong>
+	</div>
+	<div class="column">
+		<span><%= paginate @discussions, window: 2 %></span>
 	</div>
 </div>
