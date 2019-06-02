@@ -5,15 +5,10 @@
 		<%= render 'shared/portfolio_header' %>
 
 		<div class="container marketing">
-	    <%= render 'shared/portfolio_featurette' %>	    
+	    <%= render 'shared/portfolio_content' %>	    
 	  </div>
 
 	  <%= render 'shared/portfolio_footer' %>
 	</main>
-	
+
 </body>
-
-
-<h1>Portfolio Items</h1>
-<%= link_to "Create New Item", new_portfolio_path if has_role?(:admin) %>
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>

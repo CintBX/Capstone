@@ -1,4 +1,5 @@
 <h1>Portfolio Items</h1>
+<%= link_to "Create New Portfolio Item", new_portfolio_path, class: 'btn btn-outline-primary new-port' if has_role?(:admin) %>
 <hr class="featurette-divider">
 <div class="row featurette" id="devport">
   <div class="col-md-7">
@@ -35,3 +36,5 @@
 </div>
 
 <hr class="featurette-divider">
+
+<%= render partial: 'portfolio_item', collection: @portfolio_items %>
