@@ -1,10 +1,94 @@
 <body>
 	<%= render 'shared/portfolio_nav' %>
 	<main role="main">
-		<%= render 'shared/portfolio_header' %>
+		<%#= render 'shared/portfolio_header' %>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+		      <div class="container">
+		        <div class="carousel-caption text-left">
+		          <h1>Devcamp Portfolio Application</h1>
+		          <p>The first project of the course, this is a Ruby on Rails application that contains multiple layouts and allows users to create blog posts and manage their portfolio. </p>
+		          <p><span><a class="btn btn-lg btn-primary" href="#devport" role="button">Learn more</a></span></p>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+		      <div class="container">
+		        <div class="carousel-caption">
+		          <h1>Overtime Application</h1>
+		          <p>The second project of the course, the Overtime App is an enterprise application for businesses in need of a thorough but simple way to manage their employee's overtime hours.</p>
+		          <p><span><a class="btn btn-lg btn-primary" href="#overtime" role="button">Learn more</a></span></p>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+		      <div class="container">
+		        <div class="carousel-caption text-right">
+		          <h1>Angular Freelance Application</h1>
+		          <p>The third and final project of the course, the Freelance app is written in Typescript using the Angular framework.  This app gives freelancers the ability to manage their work and communicate with potential clients.</p>
+		          <p><span><a class="btn btn-lg btn-primary" href="#angular" role="button">Learn more</a></span></p>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+
 	  <div class="container marketing">
-	    <%= render 'shared/portfolio_github' %>
-	    <%= render 'shared/portfolio_featurette' %>
+	    <%#= render 'shared/portfolio_featurette' %>
+	    <h1>Portfolio Items</h1>
+			<hr class="featurette-divider">
+			<div class="row featurette" id="devport">
+			  <div class="col-md-7">
+			    <h2 class="featurette-heading">Devcamp Portfolio. <span class="text-muted">It'll blow your mind.</span></h2>
+			    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			  </div>
+			  <div class="col-md-5">
+			    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+			  </div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette" id="overtime">
+			  <div class="col-md-7 order-md-2">
+			    <h2 class="featurette-heading">Overtime. <span class="text-muted">See for yourself.</span></h2>
+			    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			  </div>
+			  <div class="col-md-5 order-md-1">
+			    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+			  </div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette" id="angular">
+			  <div class="col-md-7">
+			    <h2 class="featurette-heading">Angular Freelance. <span class="text-muted">Checkmate.</span></h2>
+			    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			  </div>
+			  <div class="col-md-5">
+			    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+			  </div>
+			</div>
+
+			<hr class="featurette-divider">
 	  </div>
 	  <%= render 'shared/portfolio_footer' %>
 	</main>

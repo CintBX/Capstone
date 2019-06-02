@@ -1,3 +1,5 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$("span").find("a").click (e) ->
+    e.preventDefault()
+    section = $(this).attr "href"
+    $("html, body").animate
+        scrollTop: $(section).offset().top
