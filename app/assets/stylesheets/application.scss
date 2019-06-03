@@ -29,7 +29,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 
 body {
@@ -41,7 +40,12 @@ body {
 }
 
 .cover-container {
-  max-width: 43em;
+  max-width: 49em;
+}
+
+.lead a:hover {
+  color: #7FFF00;
+  background-color: #696969;
 }
 
 
@@ -138,4 +142,23 @@ p {
 .app-nav span {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 55%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-55%) translateY(-50%);
+  transform: translateX(-55%) translateY(-50%);
+  background: image-url('home_bg.png') no-repeat;
+  background-size: cover;
+}
+
+.app-footer {
+  color: white;
 }
