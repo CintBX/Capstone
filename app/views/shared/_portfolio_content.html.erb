@@ -3,12 +3,12 @@
 
 <hr class="featurette-divider">
 <div class="row featurette" id="devport">
-  <div class="col-md-7">
+  <div class="col-md-8">
     <h2 class="featurette-heading"><%= link_to @portfolio_items.first.title, portfolio_show_path(@portfolio_items.first) %>. <span class="text-muted"><%= @portfolio_items.first.subtitle %>.</span></h2>
     <p class="lead"><%= @portfolio_items.first.body %></p>
   </div>
-  <div class="col-md-5">
-    <%= image_tag @portfolio_items.first.thumb_image, class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.first.thumb_image.nil? %>
+  <div class="col-md-4">
+    <%= image_tag "devcamp_1.png", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.first.thumb_image.nil? %>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
     <p class="lead"><%= @portfolio_items.second.body %></p>
   </div>
   <div class="col-md-5 order-md-1">
-    <%= image_tag @portfolio_items.second.thumb_image, class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.second.thumb_image.nil? %>
+    <%= image_tag "overtime_1.jpg", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.second.thumb_image.nil? %>
   </div>
 </div>
 
@@ -30,7 +30,7 @@
     <p class="lead"><%= @portfolio_items.third.body %></p>
   </div>
   <div class="col-md-5">
-    <%= image_tag @portfolio_items.third.thumb_image, class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.third.thumb_image.nil? %>
+    <%= image_tag "freelance_1.jpg", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.third.thumb_image.nil? %>
   </div>
 </div>
 
