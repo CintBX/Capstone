@@ -30,6 +30,7 @@ class PortfoliosController < ApplicationController
 	def show
 		@page_title = @portfolio_item.title
 		@seo_keywords = @portfolio_item.body
+		@portfolio_items = Portfolio.all
 	end
 
 	def edit
