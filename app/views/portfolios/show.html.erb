@@ -1,7 +1,13 @@
 <div class="container portfolio-container">
 	<div class="row">
 		<div class="col-md-7">
-			<p><%= image_tag "freelance_2.jpg", width: '100%' %></p>
+			<% if current_page? portfolio_show_url(@portfolio_items.find_by(id: 1)) %>
+				<p><%= image_tag "devcamp_2.png", width: '100%' %></p>
+			<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(id: 2)) %>
+				<p><%= image_tag "overtime_2.jpg", width: '100%' %></p>
+			<% else %>
+				<p><%= image_tag "freelance_2.jpg", width: '100%' %></p>
+			<% end %>
 		</div>
 
 		<div class="col-md-5">
