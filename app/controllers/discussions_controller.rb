@@ -12,7 +12,11 @@ class DiscussionsController < ApplicationController
   end
 
   def new
-    @discussion = current_user.discussions.build
+    if current_user
+      @discussion = current_user.discussions.build
+    else
+      redirect_to discussions_path, notice: "You are not authorized to perform this action."
+    end
   end
 
   def edit
