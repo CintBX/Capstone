@@ -8,7 +8,7 @@ class ChannelsController < ApplicationController
   end
 
   def show
-    @discussions = Discussion.where(channel_id: @channel.id).order("created_at DESC")
+    @discussions = Discussion.where(channel_id: @channel.id).page(params[:page]).per(4).order("created_at DESC")
     @channels = Channel.all
   end
 
