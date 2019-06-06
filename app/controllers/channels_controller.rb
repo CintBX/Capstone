@@ -3,8 +3,12 @@ class ChannelsController < ApplicationController
   layout 'discussion'
 
   def index
-    @channels = Channel.all
-    @discussions = Discussion.all.order("created_at DESC")
+    if has_role?(:admin)
+      @channels = Channel.all
+      @discussions = Discussion.all.order("created_at DESC")
+    else
+      redirect_to discussions_path, notice: "You are not authorized to view this page."
+    end
   end
 
   def show
@@ -13,10 +17,19 @@ class ChannelsController < ApplicationController
   end
 
   def new
-    @channel = Channel.new
+    if has_role?(:admin)
+      @channel = Channel.new
+    else
+      redirect_to discussions_path, notice: "You are not authorized to perform this action."
+    end
   end
 
   def edit
+    if has_role?(:admin)
+      @channel = Channel.find(params[:id])
+    else
+      redirect_to @channel, notice: "You are not authorized to perform this action."
+    end
   end
 
   def create
