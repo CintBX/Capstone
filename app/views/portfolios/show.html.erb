@@ -2,6 +2,11 @@
 	<div class="row">
 		<div class="col-md-7">
 			<%= render 'portfolio_main_image' %>
+			<h3>Technologies Used:</h3>
+			<% @portfolio_item.technologies.each do |t| %>
+				<p><%= t.name %></p>
+			<% end %>
+			<hr>
 			<a href="#">View This Project</a>
 		</div>
 
@@ -9,12 +14,8 @@
 			<h1><%= @portfolio_item.title.upcase %></h1>
 			<hr>
 			<em><%= @portfolio_item.subtitle %></em>
-			<p><%= @portfolio_item.body %></p>
+			<p><%= markdown(@portfolio_item.body) %></p>
 			<hr>
-			<h3>Technologies Used:</h3>
-			<% @portfolio_item.technologies.each do |t| %>
-				<p><%= t.name %></p>
-			<% end %>
 
 			<% if has_role?(:admin) %>
 				<%= link_to "Edit", edit_portfolio_path(@portfolio_item) %> /
