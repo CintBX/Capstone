@@ -1,6 +1,7 @@
 class RepliesController < ApplicationController
 	before_action :set_reply, only: [:edit, :update, :show, :destroy]
 	before_action :set_discussion, only: [:create, :edit, :update, :show, :update, :destroy]
+	layout 'discussion'
 
 	def create
 		@reply = @discussion.replies.create(params[:reply].permit(:reply, :discussion_id))
