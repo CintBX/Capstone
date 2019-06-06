@@ -20,6 +20,11 @@ class DiscussionsController < ApplicationController
   end
 
   def edit
+    if has_role?(:admin) || discussion_author(@discussion)
+      @discussion = Discussion.find(params[:id])
+    else
+      redirect_to discussions_path, notice: "You are not authorized to perform this action."
+    end
   end
 
   def create
