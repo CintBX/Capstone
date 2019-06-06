@@ -4,7 +4,7 @@
 <hr class="featurette-divider">
 <div class="row featurette" id="devport">
   <div class="col-md-8">
-    <h2 class="featurette-heading"><%= link_to @portfolio_items.first.title, portfolio_show_path(@portfolio_items.first) %>. <span class="text-muted"><%= @portfolio_items.first.subtitle %>.</span></h2>
+    <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.first.title, portfolio_show_path(@portfolio_items.first) %>. <span class="text-muted"><%= @portfolio_items.first.subtitle %>.</span></h2>
     <p class="lead"><%= @portfolio_items.first.body %></p>
   </div>
   <div class="col-md-4">
@@ -15,7 +15,7 @@
 <hr class="featurette-divider">
 <div class="row featurette" id="overtime">
   <div class="col-md-7 order-md-2">
-    <h2 class="featurette-heading"><%= link_to @portfolio_items.second.title, portfolio_show_path(@portfolio_items.second) %>. <span class="text-muted"><%= @portfolio_items.second.subtitle %>.</span></h2>
+    <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.second.title, portfolio_show_path(@portfolio_items.second) %>. <span class="text-muted"><%= @portfolio_items.second.subtitle %>.</span></h2>
     <p class="lead"><%= @portfolio_items.second.body %></p>
   </div>
   <div class="col-md-5 order-md-1">
@@ -26,7 +26,7 @@
 <hr class="featurette-divider">
 <div class="row featurette" id="angular">
   <div class="col-md-7">
-    <h2 class="featurette-heading"><%= link_to @portfolio_items.third.title, portfolio_show_path(@portfolio_items.third ) %>. <span class="text-muted"><%= @portfolio_items.third.subtitle %>.</span></h2>
+    <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.third.title, portfolio_show_path(@portfolio_items.third ) %>. <span class="text-muted"><%= @portfolio_items.third.subtitle %>.</span></h2>
     <p class="lead"><%= @portfolio_items.third.body %></p>
   </div>
   <div class="col-md-5">
