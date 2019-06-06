@@ -12,7 +12,11 @@ class PortfoliosController < ApplicationController
 	end
 
 	def new
-		@portfolio_item = Portfolio.new
+		if has_role?(:admin)
+			@portfolio_item = Portfolio.new
+		else
+			redirect_to portfolios_path, notice: "You are not authorized to perform this action."
+		end
 	end
 
 	def create
@@ -34,6 +38,11 @@ class PortfoliosController < ApplicationController
 	end
 
 	def edit
+		if has_role?(:admin)
+			@portfolio_item = Portfolio.find(params[:id])
+		else
+			redirect_to portfolios_path, notice: "You are not authorized to perform this action."
+		end
 	end
 
 	def update
