@@ -27,8 +27,12 @@ class RepliesController < ApplicationController
 	end
 
 	def edit
-		@discussion = Discussion.find(params[:discussion_id])
-		@reply = @discussion.replies.find(params[:id])
+		if has_role?(:admin) || reply_author(@reply)
+			@discussion = Discussion.find(params[:discussion_id])
+			@reply = @discussion.replies.find(params[:id])
+		else
+			redirect_to @discussion, notice: "You are not authorized to perform this action."
+		end
 	end
 
 	def update

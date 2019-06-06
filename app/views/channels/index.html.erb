@@ -1,29 +1,21 @@
 <h1 class="title is-2">Channels</h1>
 
-<% if has_role?(:admin) %>
-
-  <div class="level">
-    <div class="level-left"></div>
-    <div class="level-right">
-      <%= link_to "New Channel", new_channel_path, class: 'button is-dark' %>
-    </div>
+<div class="level">
+  <div class="level-left"></div>
+  <div class="level-right">
+    <%= link_to "New Channel", new_channel_path, class: 'button is-dark' %>
   </div>
+</div>
 
-  <table class="table is-fullwidth">
-    <thead>
-      <tr>
-        <th>Channels</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Channels</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-    <tbody>
-      <%= render 'channels' %>
-    </tbody>
-  </table>
-
-<% else %>
-
-  <p>Sorry! You don't have access to this page.</p>
-  
-<% end %>
+  <tbody>
+    <%= render 'channels' %>
+  </tbody>
+</table>
