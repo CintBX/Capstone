@@ -2,6 +2,10 @@
 @import "functions";
 @import "gritter";
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .image {
   border-radius: 50%;
   img {
