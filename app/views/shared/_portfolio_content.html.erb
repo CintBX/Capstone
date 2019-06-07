@@ -5,7 +5,7 @@
 <div class="row featurette" id="devport">
   <div class="col-md-8">
     <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.first.title, portfolio_show_path(@portfolio_items.first) %>. <span class="text-muted"><%= @portfolio_items.first.subtitle %>.</span></h2>
-    <p class="lead"><%= truncate(@portfolio_items.first.body, length: 300) %></p>
+    <p class="lead"><%= truncate(@portfolio_items.first.body, length: 205) %></p>
   </div>
   <div class="col-md-4">
     <%= image_tag "devcamp_1.png", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.first.thumb_image.nil? %>
@@ -27,7 +27,7 @@
 <div class="row featurette" id="angular">
   <div class="col-md-7">
     <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.third.title, portfolio_show_path(@portfolio_items.third ) %>. <span class="text-muted"><%= @portfolio_items.third.subtitle %>.</span></h2>
-    <p class="lead"><%= truncate(@portfolio_items.third.body, length: 300) %></p>
+    <p class="lead"><%= truncate(@portfolio_items.third.body, length: 205) %></p>
   </div>
   <div class="col-md-5">
     <%= image_tag "freelance_1.jpg", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.third.thumb_image.nil? %>
