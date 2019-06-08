@@ -1,0 +1,7 @@
+<% if current_page? portfolio_show_url(@portfolio_items.find_by(id: 1)) %>
+	<a href="https://cintron-devcamp-portfolio.herokuapp.com/" target="_blank" class="btn btn-primary btn-block"><strong>View This Project</strong></a>
+<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(id: 2)) %>
+	<a href="https://cintron-overtime.herokuapp.com" target="_blank" class="btn btn-primary btn-block"><strong>V</iew This Project</a>
+<% else %>
+	<a href="https://cintron-freelance.herokuapp.com/home" target="_blank" class="btn btn-primary btn-block"><strong>View This Project</strong></a>
+<% end %>
