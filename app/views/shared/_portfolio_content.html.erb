@@ -4,7 +4,7 @@
 <hr class="featurette-divider">
 <div class="row featurette" id="devport">
   <div class="col-md-8">
-    <!-- <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.first.title, portfolio_show_path(@portfolio_items.first) %>. <span class="text-muted"><%= @portfolio_items.first.subtitle %>.</span></h2> -->
+    <h2 class="featurette-heading portfolio-link"><%= link_to @portfolio_items.first.title, portfolio_show_path(@portfolio_items.first) %>. <span class="text-muted"><%= @portfolio_items.first.subtitle %>.</span></h2>
     <p class="lead"><%= truncate(@portfolio_items.first.body, length: 205) %></p>
   </div>
   <div class="col-md-4">
