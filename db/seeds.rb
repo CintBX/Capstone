@@ -1,7 +1,7 @@
 # After bundle exec rake db:setup, enter the Console and do `User.first.add_role "admin"`
 
 # Users
-@admin_user = User.create(name: "Dustin Cintron", username: "DCin", email: "d.cint88@gmail.com", password: "password", password_confirmation: "password")
+@admin_user = User.create(name: "Dustin Cintron", username: "DCin", email: "d.cint88@gmail.com", password: "somepassword", password_confirmation: "somepassword")
 puts "1 Admin created."
 
 @user = User.create(name: "Jon Doe", username: "JD", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
@@ -12,25 +12,65 @@ puts "1 User created."
 devcamp_portfolio = Portfolio.create!(
 	title: "Devcamp Portfolio",
 	subtitle: "Ruby on Rails",
-	body: "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
-	main_image: "https://via.placeholder.com/600x600",
-	thumb_image: "https://via.placeholder.com/500x425"
+	body: "Devcamp-Portfolio is the first and primary project I built during my time as a Devcamp student.  This application features multiple pages and layouts, each with their own respective style and functionality.
+
+**The main layout of the entire app**  contains 4 pages:
+- a Home page with a video background
+- an About page with drop-down buttons for my resume
+- a Contact page with my info and google maps rendering
+- a 'Tech News' page that renders random, new tweets made by users who are discussing Rails
+
+**The Blog**  features:
+- it's own layout provided by bootstrap
+- a sidebar that includes links to my social media
+- a list of blogs that can be Drafts or Published
+- full pagination that occurs without page reload
+- comments under each blog, rendered without page reload
+
+**The Portfolios page** is where users can upload their portfolio items neatly organized for potential employers.  Includes:
+- it's own layout provided by bootstrap
+- a drop-down navigation header
+- drag-n-drop functionality 
+- image file upload system",
+	main_image: "devcamp_2.png",
+	thumb_image: "devcamp_1.png"
 )
 
 overtime_app = Portfolio.create!(
 	title: "Overtime App",
 	subtitle: "Ruby on Rails",
-	body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
-	main_image: "https://via.placeholder.com/600x600",
-	thumb_image: "https://via.placeholder.com/500x425"
+	body: "Overtime App, also called Time Tracker, is the second project I created.  With Overtime,  managers can give their employees the ability to request overtime.  They can also track those overtime requests and verify if the overtime was worked or not.
+
+This application is different depending on what kind of user is accessing it (Users vs Admin users).
+
+**Users represent the employees.**
+They can:
+- create an account
+- log on and request extra time 
+- specifying how many extra hours they would like to work
+
+**Admin users represent the supervisors and managers.**
+Admins have access to:
+- a list of all pending OT requests
+- a directory containing the info of every employee in the company 
+- the *Admin Dashboard*, which organizes overtime requests and lists all employees and managers.  **Users do not have access to this page.**",
+	main_image: "overtime_2.jpg",
+	thumb_image: "overtime_1.jpg"
 )
 
 angular_app = Portfolio.create!(
 	title: "Freelancer Dashboard",
 	subtitle: "Typescript and Angular",
-	body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo.",
-	main_image: "https://via.placeholder.com/600x600",
-	thumb_image: "https://via.placeholder.com/500x425"
+	body: "The Freelance Camp Dashboard is the third demo application I made for Devcamp.  
+
+This app is designed for freelancers.  It is a dashboard one can use to organize their work for past clients, as well as create proposals for future clients.
+
+**This project is created in Microservice architecture.** It contains three components:
+- a front-end, client-side app written in TypeScript using Angular framework
+- a back-end rails microservice that sends Documents data to the front-end
+- another back-end rails microservice that contains and organizes Proposals a freelancer has made to various clients",
+	main_image: "freelance_2.jpg",
+	thumb_image: "freelance_1.jpg"
 )
 puts "3 Portfolio Items created."
 
