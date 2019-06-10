@@ -1,7 +1,7 @@
-<% if current_page? portfolio_show_url(@portfolio_items.find_by(id: 1)) %>
-	<p><%= image_tag "devcamp_2.png", width: '100%' %></p>
-<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(id: 2)) %>
-	<p><%= image_tag "overtime_2.jpg", width: '100%' %></p>
+<% if current_page? portfolio_show_url(@portfolio_items.find_by(title: "Devcamp Portfolio")) %>
+	<p><%= image_tag @portfolio_item.main_image, width: '100%' %></p>
+<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(title: "Overtime App")) %>
+	<p><%= image_tag @portfolio_item.main_image, width: '100%' %></p>
 <% else %>
-	<p><%= image_tag "freelance_2.jpg", width: '100%' %></p>
+	<p><%= image_tag @portfolio_item.main_image, width: '100%' %></p>
 <% end %>
