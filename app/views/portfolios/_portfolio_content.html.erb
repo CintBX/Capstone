@@ -6,7 +6,7 @@
     <p class="lead"><%= truncate(@portfolio_items.first.body, length: 205) %></p>
   </div>
   <div class="col-md-4">
-    <%= image_tag "devcamp_1.png", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.first.thumb_image.nil? %>
+    <%= image_tag @portfolio_items.first.thumb_image, class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.first.thumb_image.nil? %>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
     <p class="lead"><%= truncate(@portfolio_items.second.body, length: 300) %></p>
   </div>
   <div class="col-md-5 order-md-1">
-    <%= image_tag "overtime_1.jpg", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.second.thumb_image.nil? %>
+    <%= image_tag @portfolio_items.second.thumb_image, class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.second.thumb_image.nil? %>
   </div>
 </div>
 
@@ -28,7 +28,7 @@
     <p class="lead"><%= truncate(@portfolio_items.third.body, length: 205) %></p>
   </div>
   <div class="col-md-5">
-    <%= image_tag "freelance_1.jpg", class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.third.thumb_image.nil? %>
+    <%= image_tag @portfolio_items.third.thumb_image, class: 'featurette-image img-fluid mx-auto img-margin' unless @portfolio_items.third.thumb_image.nil? %>
   </div>
 </div>
 
