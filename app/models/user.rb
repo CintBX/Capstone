@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :channels, through: :discussions
 
  # Possibly validate :username
- validates_presence_of :name, :username
+ validates_presence_of :name
 
  def first_name
  	self.name.split.first
