@@ -1,10 +1,10 @@
 # After bundle exec rake db:setup, enter the Console and do `User.first.add_role "admin"`
 
 # Users
-@admin_user = User.create(name: "Dustin Cintron", username: "DCin", email: "d.cint88@gmail.com", password: "somepassword", password_confirmation: "somepassword")
+@admin_user = User.create(name: "Dustin Cintron", email: "d.cint88@gmail.com", password: "somepassword", password_confirmation: "somepassword")
 puts "1 Admin created."
 
-@user = User.create(name: "Jon Doe", username: "JD", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
+@user = User.create(name: "Jon Doe", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
 puts "1 User created."
 
 
