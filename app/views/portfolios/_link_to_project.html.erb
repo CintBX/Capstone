@@ -2,6 +2,10 @@
 	<%= link_to 'View this Project', "https://cintron-devcamp-portfolio.herokuapp.com/", target: :_blank, class: 'btn btn-primary btn-block' %>
 <% elsif current_page? portfolio_show_url(@portfolio_items.find_by(id: 2)) %>
 	<%= link_to 'View this Project', "https://cintron-overtime.herokuapp.com", target: :_blank, class: 'btn btn-primary btn-block' %>
+	<br>
+		<p><strong>To view, please log in as either an <em>Admin</em> or a <em>User</em>.</strong></p>
+		<div>ADMIN LOGIN: admin@test.com / asdfasdf</div>
+		<div>USER LOGIN: test@test.com / asdfasdf</div>
 <% else %>
 	<%= link_to 'View this Project', "https://cintron-freelance.herokuapp.com/home", target: :_blank, class: 'btn btn-primary btn-block' %>
 <% end %>
