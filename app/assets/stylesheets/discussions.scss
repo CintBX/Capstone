@@ -56,3 +56,36 @@ body {
 .center-this {
   text-align: center;
 }
+
+/*
+ * Styles from the web
+ */
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar,
+.navbar-menu,
+.navbar-end {
+  align-items: stretch;
+  display: flex;
+  padding: 0;
+  background-color: whitesmoke;
+  box-shadow: none;
+}
+
+.navbar-menu {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.navbar .container {
+  display: flex;
+}
