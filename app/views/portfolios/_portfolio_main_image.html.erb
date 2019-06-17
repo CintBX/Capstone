@@ -1,7 +1,7 @@
 <% if current_page? portfolio_show_url(@portfolio_items.find_by(title: "Devcamp Portfolio")) %>
-	<p><%= image_tag @portfolio_item.main_image, width: '100%' %></p>
+	<p><%= link_to image_tag(@portfolio_item.main_image, width: '100%'), "https://github.com/CintBX/devcamp-portfolio", target: :_blank %></p>
 <% elsif current_page? portfolio_show_url(@portfolio_items.find_by(title: "Overtime App")) %>
-	<p><%= image_tag @portfolio_item.main_image, width: '100%' %></p>
+	<p><%= link_to image_tag(@portfolio_item.main_image, width: '100%'), "https://github.com/CintBX/TheOvertime_App", target: :_blank %></p>
 <% else %>
-	<p><%= image_tag @portfolio_item.main_image, width: '100%' %></p>
+	<p><%= link_to image_tag(@portfolio_item.main_image, width: '100%'), "https://github.com/CintBX/freelance-camp", target: :_blank %></p>
 <% end %>
