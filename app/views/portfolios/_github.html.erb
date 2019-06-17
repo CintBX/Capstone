@@ -1,0 +1,13 @@
+<% if current_page? portfolio_show_url(@portfolio_items.find_by(title: "Devcamp Portfolio")) %>
+	<%= link_to @portfolio_item.subtitle do %>
+		<a href="https://github.com/CintBX/devcamp-portfolio" target="_blank">Source code</a>
+	<% end %>
+<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(title: "Overtime App")) %>
+	<%= link_to @portfolio_item.subtitle do %>
+		<a href="https://github.com/CintBX/TheOvertime_App" target="_blank">Source code</a>
+	<% end %>
+<% else %>
+	<%= link_to @portfolio_item.subtitle do %>
+		<a href="https://github.com/CintBX/freelance-camp" target="_blank">Source code</a>
+	<% end %>
+<% end %>
