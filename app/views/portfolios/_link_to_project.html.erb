@@ -1,7 +1,7 @@
-<% if current_page? portfolio_show_url(@portfolio_items.find_by(title: "Devcamp Portfolio")) %>
-	<p><%= link_to 'View this Project', "https://cintron-devcamp-portfolio.herokuapp.com/", target: :_blank, class: 'btn btn-primary btn-block' %></p>
-<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(title: "Overtime App")) %>
-	<p><%= link_to 'View this Project', "https://cintron-overtime.herokuapp.com", target: :_blank, class: 'btn btn-primary btn-block' %></p>
+<% if current_page? portfolio_show_url(@portfolio_items.find_by(id: 1)) %>
+	<%= link_to 'View this Project', "https://cintron-devcamp-portfolio.herokuapp.com/", target: :_blank, class: 'btn btn-primary btn-block' %>
+<% elsif current_page? portfolio_show_url(@portfolio_items.find_by(id: 2)) %>
+	<%= link_to 'View this Project', "https://cintron-overtime.herokuapp.com", target: :_blank, class: 'btn btn-primary btn-block' %>
 <% else %>
-	<p><%= link_to 'View this Project', "https://cintron-freelance.herokuapp.com/home", target: :_blank, class: 'btn btn-primary btn-block' %></p>
+	<%= link_to 'View this Project', "https://cintron-freelance.herokuapp.com/home", target: :_blank, class: 'btn btn-primary btn-block' %>
 <% end %>
