@@ -26,7 +26,7 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 
 # Gems from Discussion Forum Guide
 gem 'bulma-rails', '~> 0.6.2'
