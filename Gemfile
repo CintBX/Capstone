@@ -35,7 +35,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rolify', '~> 5.2'
 gem 'cancancan', '~> 2.1', '>= 2.1.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
-gem 'redcarpet', '~> 3.4'
+gem 'redcarpet', '~> 3.5'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'simple_form', '~> 4.1'
 
